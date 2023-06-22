@@ -1,0 +1,124 @@
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif; /* Fonte */
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%); /* Cor de fundo */
+}
+
+section.card {
+  max-width: 600px;
+  min-height: 400px;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 15px;
+  overflow: hidden;
+  display: grid; /* Muda o display para grid */
+  background-color: hsl(0, 0%, 100%);
+  margin: 20px;
+}
+
+.card-img {
+  background: url(./images/image-product-desktop.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-info {
+  padding: 2rem;
+}
+
+.card-info h1 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.card-info h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 31px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: hsl(212, 21%, 14%);
+}
+
+.card-info p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+}
+
+p.price {
+  margin-top: 30px;
+  line-height: 1;
+}
+
+p.price span {
+  font-size: 31px;
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  margin: 0 20px 0 0;
+  vertical-align: sub;
+}
+.card-info button {
+  position: relative;
+  background: hsl(158, 36%, 37%);
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 0;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 30px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.card-info button:hover {
+  background: hsl(158, 43%, 17%);
+}
+
+.card-info button svg {
+  position: absolute;
+  left: 23%;
+}
+@media (max-width: 512px) {
+  section.card {
+    max-width: 345px;
+    min-height: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card-img {
+    background: url(./images/image-product-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-info h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .card-info h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card-info button {
+    margin-top: 20px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
